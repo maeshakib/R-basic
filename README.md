@@ -46,3 +46,15 @@ M<- c(8, 10, 2, 5)
 # set NULL to the vector
 M<- NULL
 cat('Output vector', M)
+
+# Sorting elements of a R Vector
+
+my_elements <- c(1:10)
+sorted_element <- sort(my_elements, decreasing = TRUE)
+sorted_element
+
+# Loop over a vector
+for (value in sequence) {
+    code
+}
+
