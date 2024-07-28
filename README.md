@@ -59,15 +59,15 @@ for (value in sequence) {
 }
 
 ## Matrices
-•	homogeneous data structures
+- homogeneous data structures
 
 A matrix is a two-dimensional array in which each element has the same mode (numeric,character, or logical). 
 Matrices are created with the matrix function. The general format is
 myymatrix <- matrix(vector, nrow=number_of_rows, ncol=number_of_columns,byrow=logical_value, dimnames=list(
 char_vector_rownames, char_vector_colnames))
-•	where vector contains the elements for the matrix, 
-•	nrow and ncol specify the row and column dimensions, and 
-•	dimnames contains optional row and column labels stored in character vectors. 
-•	The option byrow indicates whether the matrix should be filled in by row (byrow=TRUE) or by column (byrow=FALSE). The default is by column
+- where vector contains the elements for the matrix, 
+- nrow and ncol specify the row and column dimensions, and 
+- dimnames contains optional row and column labels stored in character vectors. 
+- The option byrow indicates whether the matrix should be filled in by row (byrow=TRUE) or by column (byrow=FALSE). The default is by column
 
 
