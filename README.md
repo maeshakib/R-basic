@@ -71,3 +71,28 @@ char_vector_rownames, char_vector_colnames))
 - The option byrow indicates whether the matrix should be filled in by row (byrow=TRUE) or by column (byrow=FALSE). The default is by column
 
 
+## 1.	Creating matrices
+r1 <- c("R1","R2","R3")
+c1 <- c("C1","C2")
+my_mat =matrix(1:6,3,2)
+my_mat
+
+#matrix should be filled in by row (byrow=TRUE) 
+my_mat =matrix(1:6,3,2,byrow = TRUE)
+my_mat
+
+y<- matrix(1:20,nrow=5,ncol=4,byrow = TRUE)
+y
+
+
+## Listing 2.2 Using matrix subscripts
+- You can identify rows, columns, or elements of a matrix by using subscripts and brackets.
+- X[i,] refers to the ith row of matrix X, X[,j] refers to the jth column, and X[i, j] refers to the ijth element, respectively. 
+- The subscripts i and j can be numeric vectors in order to select multiple rows or columns, as shown in the following listing.
+- The option byrow indicates whether the matrix should be filled in by row  (byrow=TRUE) or by column (byrow=FALSE).
+
+
+
+### all values from column no 2
+y[,2]
+### all values from row no 2
