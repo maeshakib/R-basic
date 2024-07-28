@@ -59,6 +59,7 @@ for (value in sequence) {
 }
 
 ## Matrices
+URL:https://www.geeksforgeeks.org/r-matrices/?ref=lbp
 - homogeneous data structures
 
 A matrix is a two-dimensional array in which each element has the same mode (numeric,character, or logical). 
@@ -96,3 +97,80 @@ y
 ### all values from column no 2
 y[,2]
 ### all values from row no 2
+y[2,]
+
+# Create a 3x3 matrix
+A = matrix(
+  c(1, 2, 3, 4, 5, 6, 7, 8, 9), 
+  nrow = 3,             
+  ncol = 3,             
+  byrow = TRUE          
+)
+cat("The 3x3 matrix:\n")
+print(A)
+- How can you know the dimension of the matrix?
+**ans:**
+cat("Dimension of the matrix:\n")
+print(dim(A))
+- How can you know how many rows are there in the matrix?
+**ans:**
+cat("Number of rows:\n")
+print(nrow(A))
+
+- How many columns are in the matrix?
+**ans:**
+cat("Number of columns:\n")
+print(ncol(A))
+
+- How many elements are there in the matrix?
+**ans:**
+cat("Number of elements:\n")
+print(length(A))
+# OR
+print(prod(dim(A)))
+
+### Accessing Elements of a R-Matrix
+Accessing rows: 
+#### Accessing first and second row
+cat("Accessing first and second row\n")
+print(A[1:2, ])
+
+#### Accessing columns: 
+# Accessing first and second column
+cat("Accessing first and second column\n")
+print(A[, 1:2])
+
+#### Accessing Submatrices in R:
+cat("Accessing the first three rows and the first two columns\n")
+print(A[1:3, 1:2])
+
+#### Modifying Elements of a R-Matrix
+# by direct assignments
+A[3, 3] = 30
+cat("After edited the matrix\n")
+print(A)
+
+#### Adding Row
+# New row to be inserted
+new_row <- c(10, 11, 12)  # Define the new row
+
+# Inserting the new row at the second position
+A <- rbind(number[1, ], new_row, number[-1, ])
+cat("\nAfter inserting a new row:\n")
+print(number)
+
+#### Adding Column
+# New column to be added
+new_column <- c(10, 11, 12)  # Define the new column
+
+# Adding the new column at the end
+number <- cbind(number, new_column)
+
+## Row deletion: 
+insert a negative sign before that row or column.
+# 2nd-row deletion
+A = A[-2, ]
+
+### Column deletion:  
+# 2nd-row deletion
+A = A[, -2]
